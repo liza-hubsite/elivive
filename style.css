@@ -1,5 +1,5 @@
 :root {
-    --bg-dark: #20193C;
+    --bg-dark: #1a1a1a;
     --text-light: #f3f3f3;
     --brand-red: #BC3E2D;
     --brand-orange: #D25215;
@@ -13,93 +13,80 @@ body {
     margin: 0;
 }
 
-/* Navbar */
+/* Updated Navbar for Top-Left Logo */
 .navbar {
-    padding: 20px;
+    padding: 20px 40px;
     display: flex;
     justify-content: center;
+    border-bottom: 1px solid rgba(243, 243, 243, 0.1);
 }
 
 .nav-container {
     width: 100%;
-    max-width: 1100px;
+    max-width: 1200px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Pushes items to opposite ends */
     align-items: center;
 }
 
-.nav-logo { font-weight: bold; font-size: 1.2rem; visibility: hidden; } /* Hidden because big logo is below */
+.nav-logo-img {
+    height: 50px; /* Controls the size of the logo in the corner */
+    width: auto;
+    display: block;
+}
 
 .cta-button-small {
     background-color: var(--brand-red);
     color: white;
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 12px 24px;
     border-radius: 5px;
     font-weight: bold;
+    font-size: 0.9rem;
     transition: 0.3s;
 }
 
-.cta-button-small:hover { background-color: var(--brand-orange); }
-
-/* Main Content */
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 60px 20px;
+.cta-button-small:hover { 
+    background-color: var(--brand-orange); 
 }
 
-.logo { width: 100%; max-width: 450px; margin-bottom: 2rem; }
+/* Main Content Area */
+.container {
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 100px 20px; /* More space at top since logo moved to nav */
+}
 
-h1, h2 { font-size: 2.5rem; margin-bottom: 1.5rem; line-height: 1.2; }
+h2 { 
+    font-size: 2.8rem; 
+    margin-bottom: 2rem; 
+    line-height: 1.1; 
+}
 
 .highlight { color: var(--brand-red); }
 
 .mission p {
-    font-size: 1.25rem;
-    line-height: 1.8;
+    font-size: 1.3rem;
+    line-height: 1.7;
     opacity: 0.9;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 .status-badge {
     display: inline-block;
     border: 1px solid var(--brand-purple);
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-size: 0.9rem;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 0.85rem;
     color: var(--brand-orange);
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 }
 
-/* Form Styles */
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 30px;
+footer { 
+    margin-top: 6rem; 
+    padding-bottom: 2rem;
+    opacity: 0.4; 
+    font-size: 0.8rem; 
 }
-
-input, textarea {
-    padding: 15px;
-    border-radius: 5px;
-    border: 1px solid #444;
-    background: #2a224a;
-    color: white;
-}
-
-.submit-btn {
-    background: var(--brand-red);
-    color: white;
-    border: none;
-    padding: 15px;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.back-link { color: var(--brand-orange); text-decoration: none; display: block; margin-bottom: 20px; }
-
-footer { margin-top: 4rem; opacity: 0.4; font-size: 0.8rem; }
