@@ -1,172 +1,65 @@
+/* Import Montserrat directly in CSS as a backup */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 :root {
-    --bg-dark: #2c2c2c;
+    --bg-charcoal: #2c2c2c; 
     --text-light: #f3f3f3;
     --brand-red: #BC3E2D;
     --brand-orange: #D25215;
-    --brand-purple: #8F1858;
 }
 
 body {
-    background-color: var(--bg-dark);
+    background-color: var(--bg-charcoal);
     color: var(--text-light);
-    /* Font updated to Montserrat */
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif !important;
     margin: 0;
-    -webkit-font-smoothing: antialiased;
+    padding: 0;
 }
 
-/* Navbar */
+/* THE TRANSPARENT HEADER */
 .navbar {
-    padding: 20px 40px;
-    display: flex;
-    justify-content: center;
-    border-bottom: 1px solid rgba(243, 243, 243, 0.05);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    /* This creates the transparent 'glass' effect */
+    background: rgba(44, 44, 44, 0.8); 
+    backdrop-filter: blur(10px); /* Blurs the background behind the header */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 15px 0;
 }
 
 .nav-container {
-    width: 100%;
     max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .nav-logo-img {
-    height: 50px;
+    height: 60px; /* Slightly larger to appreciate the logo colors */
     width: auto;
 }
 
+/* Main Body Content */
+.container {
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+/* Button & Badge Styles */
 .cta-button-small {
     background-color: var(--brand-red);
     color: white;
     text-decoration: none;
     padding: 12px 24px;
-    border-radius: 5px;
-    font-weight: 700; /* Bold weight for Montserrat */
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: 0.3s;
-}
-
-.cta-button-small:hover { 
-    background-color: var(--brand-orange); 
-}
-
-/* Main Layout */
-.container {
-    max-width: 850px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 100px 20px;
-}
-
-h2 { 
-    font-size: 2.5rem; 
-    margin-bottom: 2rem; 
-    line-height: 1.2;
+    border-radius: 4px;
     font-weight: 700;
-}
-
-.highlight { color: var(--brand-red); }
-
-.mission p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    opacity: 0.9;
-    margin-bottom: 3.5rem;
-    font-weight: 400;
-}
-
-.status-badge {
-    display: inline-block;
-    border: 1px solid var(--brand-purple);
-    padding: 10px 24px;
-    border-radius: 30px;
     font-size: 0.8rem;
-    color: var(--brand-orange);
     text-transform: uppercase;
-    letter-spacing: 3px;
-    font-weight: 700;
-}
-
-footer { 
-    margin-top: 6rem; 
-    opacity: 0.4; 
-    font-size: 0.75rem; 
-    padding-bottom: 2rem;
     letter-spacing: 1px;
-}
-/* Animation Effects */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-main {
-    animation: fadeInUp 1s ease-out forwards;
-}
-
-/* Mediaboom Style Form */
-.contact-container {
-    padding-top: 60px;
-}
-
-.mediaboom-form {
-    display: flex;
-    flex-direction: column;
-    gap: 2px; /* Matches the tight spacing in the screenshot */
-    max-width: 100%; /* Allows it to fill the container width */
-    margin-top: 40px;
-}
-
-.mediaboom-form .input-group {
-    width: 100%;
-    background-color: transparent;
-}
-
-.mediaboom-form input, 
-.mediaboom-form textarea {
-    width: 100%;
-    padding: 20px;
-    background-color: #ffffff !important; /* Force white background */
-    border: none;
-    border-bottom: 1px solid #ddd; /* Subtle separation */
-    color: #333 !important; /* Dark text for readability on white */
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
-    box-sizing: border-box;
-}
-
-/* Specific placeholder styling to match the grey in your screenshot */
-.mediaboom-form input::placeholder, 
-.mediaboom-form textarea::placeholder {
-    color: #888;
-}
-
-.submit-btn-full {
-    background-color: var(--brand-red);
-    color: white;
-    padding: 20px;
-    border: none;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    cursor: pointer;
-    margin-top: 20px;
-    transition: 0.3s;
-}
-
-.submit-btn-full:hover {
-    background-color: var(--brand-orange);
-}
-.nav-container {
-    animation: fadeInUp 0.8s ease-out forwards;
 }
