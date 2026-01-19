@@ -1,5 +1,5 @@
 :root {
-    --bg-dark: #20193C;
+    --bg-dark: #1a1a1a; /* Changed from Navy to Dark Grey */
     --text-light: #f3f3f3;
     --brand-red: #BC3E2D;
     --brand-orange: #D25215;
@@ -13,26 +13,25 @@ body {
     margin: 0;
 }
 
-/* Updated Navbar for Top-Left Logo */
+/* Navbar */
 .navbar {
     padding: 20px 40px;
     display: flex;
     justify-content: center;
-    border-bottom: 1px solid rgba(243, 243, 243, 0.1);
+    border-bottom: 1px solid rgba(243, 243, 243, 0.05);
 }
 
 .nav-container {
     width: 100%;
     max-width: 1200px;
     display: flex;
-    justify-content: space-between; /* Pushes items to opposite ends */
+    justify-content: space-between;
     align-items: center;
 }
 
 .nav-logo-img {
-    height: 50px; /* Controls the size of the logo in the corner */
+    height: 50px;
     width: auto;
-    display: block;
 }
 
 .cta-button-small {
@@ -50,15 +49,15 @@ body {
     background-color: var(--brand-orange); 
 }
 
-/* Main Content Area */
+/* Main Layout */
 .container {
     max-width: 850px;
     margin: 0 auto;
     text-align: center;
-    padding: 100px 20px; /* More space at top since logo moved to nav */
+    padding: 100px 20px;
 }
 
-h2 { 
+h1, h2 { 
     font-size: 2.8rem; 
     margin-bottom: 2rem; 
     line-height: 1.1; 
@@ -66,7 +65,7 @@ h2 {
 
 .highlight { color: var(--brand-red); }
 
-.mission p {
+.mission p, .tagline {
     font-size: 1.3rem;
     line-height: 1.7;
     opacity: 0.9;
@@ -84,9 +83,42 @@ h2 {
     letter-spacing: 2px;
 }
 
-footer { 
-    margin-top: 6rem; 
-    padding-bottom: 2rem;
-    opacity: 0.4; 
-    font-size: 0.8rem; 
+/* Form Styling */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
 }
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    background-color: #2a2a2a; /* Slightly lighter grey for input boxes */
+    border: 1px solid rgba(243, 243, 243, 0.1);
+    border-radius: 8px;
+    color: var(--text-light);
+    font-size: 1rem;
+}
+
+.submit-btn {
+    background-color: var(--brand-red);
+    color: white;
+    padding: 18px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.back-link {
+    color: var(--brand-orange);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 20px;
+}
+
+footer { margin-top: 6rem; opacity: 0.4; font-size: 0.8rem; padding-bottom: 2rem;}
