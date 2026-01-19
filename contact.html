@@ -3,21 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact EliVive</title>
+    <title>Contact EliVive | Join the Movement</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <a href="index.html" class="back-link">← Back to Home</a>
-        <h1>Stay <span class="highlight">Connected</span></h1>
-        <p>Be the first to know when we launch our wearable technology.</p>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html">
+                <img src="logo.png" alt="EliVive Logo" class="nav-logo-img">
+            </a>
+            <a href="contact.html" class="cta-button-small">Get Updates</a>
+        </div>
+    </nav>
 
-        <form class="contact-form">
-            <input type="text" name="name" placeholder="Full Name" required>
-            <input type="email" name="email" placeholder="Email Address" required>
-            <textarea name="note" placeholder="Note (Optional)" rows="4"></textarea>
-            <button type="submit" class="submit-btn">Submit Information</button>
-        </form>
+    <div class="container">
+        <main>
+            <a href="index.html" class="back-link">← Back to Home</a>
+            <h1>Stay <span class="highlight">Connected</span></h1>
+            <p class="tagline">Be the first to know when we launch our wearable technology and empower your health journey.</p>
+
+            <form action="https://formspree.io/f/YOUR_FORMSPREE_URL" method="POST" class="contact-form">
+                <label for="full-name" class="visually-hidden">Full Name</label>
+                <input type="text" id="full-name" name="name" placeholder="Full Name" required>
+
+                <label for="email-address" class="visually-hidden">Email Address</label>
+                <input type="email" id="email-address" name="email" placeholder="Email Address" required>
+
+                <label for="user-note" class="visually-hidden">Note</label>
+                <textarea id="user-note" name="note" placeholder="Tell us more (Optional)" rows="5"></textarea>
+
+                <button type="submit" class="submit-btn">Submit Information</button>
+            </form>
+        </main>
+
+        <footer>
+            &copy; 2026 EliVive. All rights reserved.
+        </footer>
     </div>
 </body>
 </html>
