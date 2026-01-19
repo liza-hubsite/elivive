@@ -1,5 +1,5 @@
 :root {
-    --bg-dark: #1a1a1a; 
+    --bg-dark: #1a1a1a;
     --text-light: #f3f3f3;
     --brand-red: #BC3E2D;
     --brand-orange: #D25215;
@@ -9,8 +9,10 @@
 body {
     background-color: var(--bg-dark);
     color: var(--text-light);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Font updated to Montserrat */
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
+    -webkit-font-smoothing: antialiased;
 }
 
 /* Navbar */
@@ -40,8 +42,10 @@ body {
     text-decoration: none;
     padding: 12px 24px;
     border-radius: 5px;
-    font-weight: bold;
-    font-size: 0.9rem;
+    font-weight: 700; /* Bold weight for Montserrat */
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     transition: 0.3s;
 }
 
@@ -57,68 +61,39 @@ body {
     padding: 100px 20px;
 }
 
-h1, h2 { 
-    font-size: 2.8rem; 
+h2 { 
+    font-size: 2.5rem; 
     margin-bottom: 2rem; 
-    line-height: 1.1; 
+    line-height: 1.2;
+    font-weight: 700;
 }
 
 .highlight { color: var(--brand-red); }
 
-.mission p, .tagline {
-    font-size: 1.3rem;
-    line-height: 1.7;
+.mission p {
+    font-size: 1.2rem;
+    line-height: 1.8;
     opacity: 0.9;
-    margin-bottom: 3rem;
+    margin-bottom: 3.5rem;
+    font-weight: 400;
 }
 
 .status-badge {
     display: inline-block;
     border: 1px solid var(--brand-purple);
-    padding: 10px 20px;
+    padding: 10px 24px;
     border-radius: 30px;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: var(--brand-orange);
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
+    font-weight: 700;
 }
 
-/* Form Styling */
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    max-width: 500px;
-    margin: 0 auto;
-    text-align: left;
+footer { 
+    margin-top: 6rem; 
+    opacity: 0.4; 
+    font-size: 0.75rem; 
+    padding-bottom: 2rem;
+    letter-spacing: 1px;
 }
-
-.contact-form input, 
-.contact-form textarea {
-    width: 100%;
-    padding: 15px;
-    background-color: #2a2a2a; /* Slightly lighter grey for input boxes */
-    border: 1px solid rgba(243, 243, 243, 0.1);
-    border-radius: 8px;
-    color: var(--text-light);
-    font-size: 1rem;
-}
-
-.submit-btn {
-    background-color: var(--brand-red);
-    color: white;
-    padding: 18px;
-    border: none;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.back-link {
-    color: var(--brand-orange);
-    text-decoration: none;
-    display: block;
-    margin-bottom: 20px;
-}
-
-footer { margin-top: 6rem; opacity: 0.4; font-size: 0.8rem; padding-bottom: 2rem;}
