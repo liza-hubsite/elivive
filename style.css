@@ -1,6 +1,5 @@
 :root {
-    /* Slightly lighter grey to make the logo's purple pop */
-    --bg-dark: #2c2c2c; 
+    --bg-dark: #20193C;
     --text-light: #f3f3f3;
     --brand-red: #BC3E2D;
     --brand-orange: #D25215;
@@ -10,42 +9,57 @@
 body {
     background-color: var(--bg-dark);
     color: var(--text-light);
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Inter', -apple-system, sans-serif;
     margin: 0;
-    -webkit-font-smoothing: antialiased;
-}
-
-/* Navbar with subtle transparency to separate from body */
-.navbar {
-    padding: 20px 40px;
     display: flex;
     justify-content: center;
-    background: rgba(255, 255, 255, 0.03); 
-    border-bottom: 1px solid rgba(243, 243, 243, 0.05);
-}
-
-/* Rest of the styles remain the same... */
-.nav-container {
-    width: 100%;
-    max-width: 1200px;
-    display: flex;
-    justify-content: space-between;
     align-items: center;
+    min-height: 100vh;
 }
 
-.nav-logo-img {
-    height: 55px; /* Bumped up slightly for visibility */
-    width: auto;
+.container {
+    width: 90%;
+    max-width: 900px;
+    text-align: center;
+    padding: 40px 20px;
 }
 
-/* Updated Input Field Colors for the new background */
-.contact-form input, 
-.contact-form textarea {
+.logo {
     width: 100%;
-    padding: 15px;
-    background-color: #3d3d3d; /* Lighter than background for depth */
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-    color: var(--text-light);
-    font-family: 'Montserrat', sans-serif;
+    max-width: 500px; /* Adjust based on preference */
+    height: auto;
+    margin-bottom: 3rem;
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 1rem;
+    letter-spacing: -1px;
+}
+
+.highlight {
+    color: var(--brand-red);
+}
+
+.tagline {
+    font-size: 1.2rem;
+    opacity: 0.8;
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+}
+
+.divider {
+    height: 4px;
+    width: 60px;
+    background: linear-gradient(90deg, var(--brand-purple), var(--brand-orange));
+    margin: 2rem auto;
+    border-radius: 2px;
+}
+
+footer {
+    margin-top: 5rem;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0.5;
 }
