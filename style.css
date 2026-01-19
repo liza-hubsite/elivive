@@ -90,3 +90,57 @@ footer {
     opacity: 0.4; 
     font-size: 0.8rem; 
 }
+/* Mediaboom Style Form */
+.contact-container {
+    padding-top: 60px;
+}
+
+.mediaboom-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2px; /* Matches the tight spacing in the screenshot */
+    max-width: 100%; /* Allows it to fill the container width */
+    margin-top: 40px;
+}
+
+.mediaboom-form .input-group {
+    width: 100%;
+    background-color: transparent;
+}
+
+.mediaboom-form input, 
+.mediaboom-form textarea {
+    width: 100%;
+    padding: 20px;
+    background-color: #ffffff !important; /* Force white background */
+    border: none;
+    border-bottom: 1px solid #ddd; /* Subtle separation */
+    color: #333 !important; /* Dark text for readability on white */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+/* Specific placeholder styling to match the grey in your screenshot */
+.mediaboom-form input::placeholder, 
+.mediaboom-form textarea::placeholder {
+    color: #888;
+}
+
+.submit-btn-full {
+    background-color: var(--brand-red);
+    color: white;
+    padding: 20px;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.submit-btn-full:hover {
+    background-color: var(--brand-orange);
+}
