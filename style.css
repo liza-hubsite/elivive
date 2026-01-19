@@ -97,3 +97,22 @@ footer {
     padding-bottom: 2rem;
     letter-spacing: 1px;
 }
+/* Animation Effects */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main {
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.nav-container {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
