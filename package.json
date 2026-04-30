@@ -1,0 +1,12 @@
+{
+  "name": "elivive-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static marketing site for EliVive",
+  "scripts": {
+    "dev": "node scripts/dev-server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -13,35 +13,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get Updates | EliVive</title>
+    <meta name="description" content="Join the EliVive updates list for product development announcements.">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <nav class="navbar" aria-label="Primary">
         <div class="nav-container">
-            <a href="index.html">
-                <img src="logo.png" alt="EliVive Logo" class="nav-logo-img">
+            <a href="index.html" aria-label="EliVive home">
+                <img src="logo.png" alt="EliVive" class="nav-logo-img">
             </a>
             <div class="nav-links">
-                <a href="contact.html" class="cta-button-orange">Get Updates</a>
+                <a href="contact.html" class="cta-button-orange" aria-current="page">Get Updates</a>
             </div>
         </div>
     </nav>
 
-    <div class="contact-container">
-        <div class="contact-header">
+    <main id="main-content" class="contact-container">
+        <header class="contact-header">
             <h1>Stay <span class="highlight">Connected</span></h1>
             <p class="contact-subtext">Be the first to receive updates from EliVive</p>
-        </div>
-        
-        <form action="https://formspree.io/f/mlgjndza" method="POST" class="mediaboom-form">
+            <p id="form-required-note" class="form-guidance">Fields marked with <span aria-hidden="true">*</span> are required.</p>
+        </header>
+
+        <form action="https://formspree.io/f/mlgjndza" method="POST" class="mediaboom-form" aria-describedby="form-required-note">
             <div class="form-group">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <label for="name">Full Name <span aria-hidden="true">*</span></label>
+                <input type="text" id="name" name="name" autocomplete="name" placeholder="Your Name" required>
             </div>
 
             <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" placeholder="email@example.com" required>
+                <label for="email">Email Address <span aria-hidden="true">*</span></label>
+                <input type="email" id="email" name="email" autocomplete="email" placeholder="email@example.com" required>
             </div>
 
             <div class="form-group">
@@ -53,7 +57,7 @@
                 <button type="submit" class="submit-btn-full">Send Message</button>
             </div>
         </form>
-    </div>
+    </main>
 
     <footer>
         &copy; 2026 EliVive. All rights reserved.
