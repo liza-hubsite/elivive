@@ -379,11 +379,68 @@ textarea:focus-visible {
 footer {
     text-align: center;
     padding: 40px;
-    opacity: 0.7;
+    color: #565656;
     font-size: 0.85rem;
 }
 
-/* --- 9. RESPONSIVE --- */
+.footer-copy {
+    margin-bottom: 8px;
+}
+
+.footer-link {
+    color: var(--brand-purple);
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.footer-link:hover,
+.footer-link:focus-visible {
+    color: var(--brand-red);
+}
+
+/* --- 9. ACCESSIBILITY STATEMENT PAGE --- */
+.statement-container {
+    max-width: 860px;
+    margin: 70px auto;
+    padding: 0 20px;
+}
+
+.statement-header {
+    margin-bottom: 32px;
+}
+
+.statement-header h1 {
+    font-size: 2.9rem;
+    line-height: 1.2;
+    margin-bottom: 14px;
+}
+
+.statement-date {
+    margin-top: 10px;
+}
+
+.statement-section {
+    background: var(--surface);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    padding: 28px;
+    margin-bottom: 20px;
+}
+
+.statement-section h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.statement-list {
+    margin-left: 24px;
+}
+
+.statement-list li + li {
+    margin-top: 8px;
+}
+
+/* --- 10. RESPONSIVE --- */
 @media (max-width: 768px) {
     .navbar {
         padding: 15px 20px;
@@ -421,6 +478,14 @@ footer {
 
     .contact-container {
         margin: 48px auto;
+    }
+
+    .statement-container {
+        margin: 48px auto;
+    }
+
+    .statement-header h1 {
+        font-size: 2.2rem;
     }
 
     .team-card {
